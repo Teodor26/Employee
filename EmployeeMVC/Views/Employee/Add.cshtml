@@ -1,0 +1,20 @@
+﻿@model Employee.Models.DataModels.BaseEmployee
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add</h2>
+
+
+@using (Html.BeginForm("Add", "Employee", FormMethod.Post))
+{
+<p>@Html.LabelFor(x => x.FirstName)</p>
+<p>@Html.TextBoxFor(x => x.FirstName)</p> 
+<p> @Html.LabelFor(x => x.LastName)</p>
+<p>@Html.TextBoxFor(x => x.LastName)</p>   
+<p>@Html.LabelFor(x => x.Title)</p> 
+ <p>@Html.TextBoxFor(x => x.Title)</p>  
+
+    <input type="submit" name="Оправить" />
+}

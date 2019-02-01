@@ -45,8 +45,7 @@ namespace Employee.Controllers
             {
                 employee.Id = id;
                 return Ok(employee);
-            };
-                
+            };                
         }
 
         public IHttpActionResult Delete(int id, BaseEmployee employee)
