@@ -11,7 +11,7 @@ namespace EmployeeMVC.Controllers
     public class EmployeeController : Controller
     {
         private IEmployeApiService _employeeApiService = new EmployeeApiService();
-        // GET: Employee
+        
         public async System.Threading.Tasks.Task<ActionResult> List()
         {
             var employess = await _employeeApiService.GetList();
@@ -29,8 +29,19 @@ namespace EmployeeMVC.Controllers
             
             employess.Add(employee);
 
-            return View("List");
+            return RedirectToAction("List");
         }
+       // [HttpGet]
+        //public ActionResult Delete()
+        //{
+        //    return View("List");
+        //}
+        //[HttpPost]
+        //public ActionResult Delete(int id)
+        //{
+
+        //}
+       
 
     }
 }

@@ -28,7 +28,7 @@ namespace EmployeeMVC.Services
 
             if (response.IsSuccessStatusCode)
                 employees = await response.Content.ReadAsAsync<List<BaseEmployee>>();
-                    return employees;
+            return employees;
         }
     }
 }
